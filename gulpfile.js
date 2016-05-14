@@ -13,13 +13,22 @@ gulp.task('typescript', function () {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./src/**/*.scss')
+  return gulp.src('src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('copy', function () {
-
+gulp.task('copy:html', function () {
+  return gulp.src('src/**/*.html')
+    .pipe(gulp.dest('dist'));
+});
+gulp.task('copy:js', function () {
+  return gulp.src('src/**/*.js')
+    .pipe(gulp.dest('dist/js'));
+});
+gulp.task('copy:img', function () {
+  return gulp.src('img')
+    .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('watch', function () {
