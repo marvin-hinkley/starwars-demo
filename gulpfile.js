@@ -1,20 +1,21 @@
-var gulp  = require('gulp'),
-    ts    = require('gulp-typescript'),
-    sass  = require('gulp-sass');
+var gulp        = require('gulp'),
+    ts          = require('gulp-typescript')
+    tsProject   = ts.createProject('tsconfig.json'),
+    sass        = require('gulp-sass'),
+    sourcemaps  = require('gulp-sourcemaps');
 
 gulp.task('typescript', function () {
   return gulp.src('src/**/*.ts')
-    .pipe(ts({
-      noImplicitAny: true,
-      out: 'output.js'
-    }))
-    .pipe(gulp.dest('built/local'));
+    .pipe(sourcemaps.init())
+    .pipe(ts(tsProject))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src('./src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('copy', function () {
