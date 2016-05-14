@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
+import {Character} from './character';
+import {CharacterListComponent} from './character-list/character-list.component';
+import {CharacterDetailComponent} from './character-detail/character-detail.component';
 
 @Component({
-  selector: 'starwars-demo',
-  templateUrl: 'dashboard/dashboard.html'
+  selector: 'starwars-app',
+  templateUrl: 'app.html',
+  directives: [CharacterListComponent, CharacterDetailComponent]
 })
-export class AppComponent { }
+export class AppComponent {}

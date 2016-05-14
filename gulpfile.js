@@ -5,7 +5,7 @@ var gulp        = require('gulp'),
     sourcemaps  = require('gulp-sourcemaps');
 
 gulp.task('typescript', function () {
-  return gulp.src('src/**/*.ts')
+  return gulp.src(['typings/browser.d.ts', 'src/**/*.ts'])
     .pipe(sourcemaps.init())
     .pipe(ts(tsProject))
     .pipe(sourcemaps.write())
