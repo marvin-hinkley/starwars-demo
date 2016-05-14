@@ -5,6 +5,7 @@ import {CharacterService} from '../services/character.service';
 @Component({
   selector: 'character-list',
   templateUrl: 'character-list/character-list.html',
+  styleUrls: ['character-list/character-list.css'],
   providers: [CharacterService]
 })
 

@@ -7,7 +7,7 @@
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="systemjs.config.js"></script>
+    <script src="lib/systemjs.config.js"></script>
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>
@@ -15,12 +15,13 @@
   <body>
     <div id="flex-container">
       <header>
-        <i class="fa fa-empire"></i>
-        <i class="fa fa-rebel"></i>
+        <a href="#"><i class="fa fa-empire"></i></a>
+        <a href="#"><i class="fa fa-rebel"></i></a>
       </header>
       <starwars-app></starwars-app>
       <footer>
-
+        <span>Star Wars Characters</span>
+        <span>madhouse</span>
       </footer>
     </div>
   </body>

@@ -2,7 +2,7 @@
   "name": "starwars-demo",
   "version": "0.0.1",
   "scripts": {
-    "start": "concurrently \"nodemon server.js\" ",
+    "start": "nodemon server.js --watch server.js",
     "postinstall": "typings install",
     "typings": "typings"
   },

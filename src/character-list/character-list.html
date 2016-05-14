@@ -1,1 +1,9 @@
-character list
+<ul class="characters">
+  <li *ngFor="let character of characters" [class.selected]="character === selectedCharacter" (click)="onSelect(character)">
+    <a href="#">
+      <div>
+        <span class="id">{{character.id}}</span><span>{{character.name}}</span>
+      </div>
+    </a>
+  </li>
+</ul>
