@@ -5,17 +5,16 @@
   margin: 0;
   padding: 0;
   li {
-    margin: 0;
+    margin: 0.3em 0;
     padding: 0;
-    border-bottom: 1px solid $gray-dark;
-    &:first-child {
-      border-top: 1px solid $gray-dark;
-    }
+    //border: 1px 0;
+    //border-style:solid;
+    //border-color: $gray-dark;
     a {
       display: block;
       text-decoration: none;
       color: white;
-      padding: 1em 0.5em;
+      padding: 0.5em 0.5em;
       background-color: $gray;
       &:hover {
         background-color: $gray-light;
@@ -25,8 +24,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        .id {
+        img {
           margin-right: 0.5em;
+          width: 15%;
+          height: auto;
         }
       }
     }

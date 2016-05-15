@@ -6,5 +6,11 @@ import { Characters } from '../mock-characters';
 export class CharacterService {
   getCharacters() {
     return Promise.resolve(Characters);
-  }
+  };
+  getCharacter(id: number) {
+    console.log('GetCharacter returning: ' + (Characters.filter(character => character.id === id)[0]));
+    return Promise.resolve(Characters).then(
+      characters => characters.filter(character => character.id === id)[0]
+    );
+  };
 }

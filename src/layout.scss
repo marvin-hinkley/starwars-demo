@@ -49,11 +49,14 @@ body, html {
     character-list {
       flex-shrink: 0;
       flex-grow: 1;
-      background-color: $gray;
+      max-width: 15em;
+      background-color: $gray-really-dark;
+      border-bottom: 1px solid $gray-dark;
       z-index: 1;
+      overflow-y: auto;
     }
     character-detail {
-      flex-grow: 4;
+      flex-grow: 6;
       z-index: 1;
     }
   }

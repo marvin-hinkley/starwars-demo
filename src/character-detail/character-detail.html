@@ -1,3 +1,7 @@
-<video autoplay loopid="bg-vid">
+<!-- <video autoplay loopid="bg-vid">
     <source src="img/star-wars.webm" type="video/webm">
-</video>
+</video> -->
+<div *ngIf="character">
+  <h2>{{character.name}}</h2>
+  <p>{{character.description}}</p>
+</div>
