@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteConfig } from '@angular/router-deprecated';
+import { Routes } from '@angular/router';
 import {CharacterListComponent} from './character-list/character-list.component';
 import {CharacterDetailComponent} from './character-detail/character-detail.component';
 
@@ -8,15 +8,13 @@ import {CharacterDetailComponent} from './character-detail/character-detail.comp
   templateUrl: 'app.html',
   directives: [CharacterListComponent, CharacterDetailComponent]
 })
-@RouteConfig([
+@Routes([
   {
-    path: '/',
-    name: 'App',
-    component: AppComponent
+    path: '/list/...',
+    component: CharacterListComponent
   },
   {
     path: '/detail/:id',
-    name: 'CharacterDetail',
     component: CharacterDetailComponent
   }
 ])

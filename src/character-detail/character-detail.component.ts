@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, Inject } from '@angular/core';
-import { RouteParams } from '@angular/router-deprecated';
+import { Component, Input, Inject } from '@angular/core';
+import { Router, RouteSegment, OnActivate } from '@angular/router';
 import { Character } from '../character';
 import {CharacterService} from '../services/character.service';
 
@@ -8,12 +8,13 @@ import {CharacterService} from '../services/character.service';
   templateUrl: 'character-detail/character-detail.html',
   styleUrls: ['character-detail/character-detail.css']
 })
-export class CharacterDetailComponent implements OnInit {
+export class CharacterDetailComponent implements OnActivate {
   character: Character;
 
-  constructor(@Inject(CharacterService) private characterService: CharacterService, @Inject(RouteParams) private routeParams: RouteParams){}
-  ngOnInit() {
-    let id = +this.routeParams.get('id');
-    this.characterService.getCharacter(id).then(character => this.character = character);
+  constructor(@Inject(CharacterService) private characterService: CharacterService){}
+  routerOnActivate(current: RouteSegment) {
+    this.characterService.getCharacter(+current.getParam('id')).then(
+      character => this.character = character
+    );
   }
 }

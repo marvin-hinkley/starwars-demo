@@ -1,5 +1,5 @@
 import { bootstrap }    from '@angular/platform-browser-dynamic';
-import { ROUTER_PROVIDERS, RouteParams} from '@angular/router-deprecated';
+import { ROUTER_PROVIDERS } from '@angular/router';
 import { AppComponent } from './app.component';
 import {CharacterService} from './services/character.service';
 
