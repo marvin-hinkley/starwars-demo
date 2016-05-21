@@ -1,6 +1,6 @@
 <ul class="characters">
   <li *ngFor="let character of characters">
-    <a href="/detail/{{character.id}}">
+    <a [routerLink]="['CharacterDetail', {id:character.id}]">
       <div>
         <img src="img/{{character.image}}" /><span>{{character.name}}</span>
       </div>
