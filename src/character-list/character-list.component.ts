@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router-deprecated';
+import { Component, OnInit, Inject } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router-deprecated';
 import { Character } from '../character';
 import {CharacterService} from '../services/character.service';
 
@@ -7,25 +7,17 @@ import {CharacterService} from '../services/character.service';
   selector: 'character-list',
   templateUrl: 'character-list/character-list.html',
   styleUrls: ['character-list/character-list.css'],
-  providers: [CharacterService]
+  directives: [ROUTER_DIRECTIVES]
 })
 
 export class CharacterListComponent  implements OnInit {
   characters: Character[];
-  //selectedCharacter: Character;
 
-  constructor(private characterService: CharacterService, private router: Router){}
+  constructor(@Inject(CharacterService) private characterService: CharacterService){}
   getCharacters() {
     this.characterService.getCharacters().then(characters => this.characters = characters);
   }
   ngOnInit() {
     this.getCharacters();
-  }
-  // onSelect(character: Character) {
-  //   this.selectedCharacter = character;
-  // }
-  viewDetail(character: Character) {
-    console.log('ViewDetail called with: ' + character);
-    this.router.navigate(['CharacterDetail', {id: character.id}]);
   }
 }

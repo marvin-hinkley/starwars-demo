@@ -22,9 +22,9 @@ gulp.task('copy:html', function () {
   return gulp.src('src/**/*.html')
     .pipe(gulp.dest('dist'));
 });
-gulp.task('copy:js', function () {
-  return gulp.src('lib/**/*')
-    .pipe(gulp.dest('dist/lib'));
+gulp.task('copy:config', function () {
+  return gulp.src('config/**/*')
+    .pipe(gulp.dest('dist/config'));
 });
 gulp.task('copy:img', function () {
   return gulp.src('img/**/*')
@@ -38,5 +38,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function () {
-  gulp.run('typescript', 'sass', 'copy:html', 'copy:img', 'copy:js');
+  gulp.run('typescript', 'sass', 'copy:html', 'copy:img', 'copy:config');
 });

@@ -19,6 +19,9 @@
       &:hover {
         background-color: $gray-light;
       }
+      &.router-link-active {
+        background-color: $blue-gray;
+      }
       div {
         display: flex;
         flex-direction: row;
