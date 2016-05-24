@@ -1,2 +1,13 @@
-<character-list></character-list>
+<ul id="characters">
+  <li *ngFor="let character of characters">
+    <a [routerLink]="['detail', character.id]" [ngClass]="{'rebel': character.faction == 'Rebel', 'empire': character.faction == 'Empire'}">
+      <div>
+        <img src="img/{{character.image}}" /><span>{{character.name}}</span>
+      </div>
+    </a>
+  </li>
+</ul>
 <router-outlet></router-outlet>
+<video autoplay loopid="bg-vid">
+    <source src="img/star-wars.webm" type="video/webm">
+</video>
