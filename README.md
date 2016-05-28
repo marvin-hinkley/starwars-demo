@@ -4,7 +4,6 @@ This application does just about nothing. Certainly nothing that is at all usefu
 #### Bits & Bobs
 * Angular 2
 * Webpack
-* Firebase (not yet, but soon)
 * Gulp
 * Sass (scss)
 
@@ -21,3 +20,9 @@ This application does just about nothing. Certainly nothing that is at all usefu
     ```
     $ npm run build
     ```
+
+    
+##### Future Bits
+* Firebase
+* Karma
+* Jasmine
