@@ -1,5 +1,6 @@
 {
   "name": "starwars-demo",
+  "description": "Just a learning environment for angular 2 and a handful of other new web tech",
   "version": "0.0.1",
   "scripts": {
     "start": "nodemon server.js --watch server.js",
