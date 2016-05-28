@@ -21,8 +21,8 @@ This application does just about nothing. Certainly nothing that is at all usefu
     $ npm run build
     ```
 
-    
-##### Future Bits
+
+#### Future Bits
 * Firebase
 * Karma
 * Jasmine
