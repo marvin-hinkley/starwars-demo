@@ -10,14 +10,14 @@ This application does just about nothing. Certainly nothing that is at all usefu
 
 #### To run the application:
 1. install typings, gulp, and webpack globally  
-    ```sh
+    ```
     $ npm install gulp typings webpack -g
     ```
 2. install node modules & type definitions  
-    ```sh
+    ```
     npm install
     ```
 3. build the application  
-    ```sh
+    ```
     npm run build
     ```
