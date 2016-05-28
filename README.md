@@ -20,7 +20,10 @@ This application does just about nothing. Certainly nothing that is at all usefu
     ```
     $ npm run build
     ```
-
+3. run the application  
+    ```
+    $ npm start
+    ```
 
 #### Future Bits
 * Firebase
