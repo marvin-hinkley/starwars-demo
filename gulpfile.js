@@ -38,5 +38,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function () {
-  gulp.run('typescript', 'sass', 'copy:html', 'copy:img', 'copy:config');
+  gulp.run('sass', 'copy:html', 'copy:img', 'copy:config');
 });
