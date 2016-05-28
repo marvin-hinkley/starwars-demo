@@ -15,9 +15,9 @@ This application does just about nothing. Certainly nothing that is at all usefu
     ```
 2. install node modules & type definitions  
     ```
-    npm install
+    $ npm install
     ```
 3. build the application  
     ```
-    npm run build
+    $ npm run build
     ```
